@@ -1,4 +1,4 @@
-# Energy Efficiency Analysis Project
+# Energy Efficiency Analysis
 
 ## Overview
 
