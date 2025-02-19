@@ -1,16 +1,16 @@
-# Energy Efficiency Analysis
+# Building Energy Efficiency Prediction
 
 ## Overview
 
-This project focuses on analyzing and predicting the energy efficiency of buildings based on various architectural parameters. The goal is to assess the heating and cooling load requirements of buildings as a function of building features, such as glazing area, roof area, overall height, and orientation. 
+This project focuses on analyzing and predicting the energy efficiency of buildings based on various architectural and energy-related parameters. The goal is to assess the heating and cooling load requirements of buildings as a function of their features, such as glazing area, roof area, overall height, and orientation.
 
 ### Project Objective
 
-The aim is to predict energy efficiency using these building parameters. This project demonstrates a regression analysis approach to predicting the energy consumption of buildings and evaluating model performance.
+The aim of this project is to predict the energy efficiency of buildings using a set of key building parameters. Specifically, it seeks to predict the heating load and cooling load based on features such as the building's surface area, wall area, roof area, and orientation. This project demonstrates a regression analysis approach to predicting energy consumption and evaluating model performance using Linear Regression and Random Forest Regressor models.
 
 ### Dataset
 
-The dataset contains 768 samples and 8 features, with two target variables: Heating Load and Cooling Load. The dataset was simulated using 12 different building shapes in Ecotect, where each building's characteristics, including glazing area, glazing area distribution, and orientation, were varied. 
+The dataset contains 768 samples and 10 features, including two target variables: Heating Load and Cooling Load. The data was simulated using 12 different building shapes in Ecotect, where each building's characteristics, including glazing area, glazing area distribution, and orientation, were varied.
 
 The dataset contains the following columns:
 
@@ -62,8 +62,9 @@ Both models are evaluated using R² Score and Root Mean Squared Error (RMSE).
 ### Key Results
 
 1. Descriptive Statistics
-- The data shows a varied distribution of building parameters, with Surface_Area ranging from 514.5 to 808.5 square meters and Heating_Load varying from 6.01 to 43.10.
-- The average Heating_Load is 22.31, and the Cooling_Load is 24.59.
+- Surface_Area: Range from 514.5 to 808.5 square units, with a mean of 671.71.
+- Heating_Load: Ranges from 6.01 to 43.10 units, with an average of 22.31.
+- Cooling_Load: Ranges from 10.9 to 48.03 units, with an average of 24.59.
 
 2. Model Evaluation for Heating Load
 - Linear Regression: R² Score: 0.9122 // RMSE: 3.0254
@@ -79,14 +80,11 @@ The Random Forest Regressor outperformed Linear Regression for both heating and 
 
 The most important features for predicting heating and cooling loads are Surface_Area, Overall_Height, and Glazing_Area.
 
-### Future Work
+### Key Observations
 
-- Model Optimization: Experiment with hyperparameter tuning for better model performance.
-- Cross-Validation: Use cross-validation to ensure the robustness of the models.
-- Additional Features: Explore the inclusion of more variables like weather data or occupancy patterns to further improve predictions.
-- Multi-Class Classification: Convert the target variables into categorical classes and apply classification models to predict energy efficiency in different classes (e.g., low, medium, high efficiency).
+- The Random Forest Regressor outperformed Linear Regression for both heating and cooling load predictions, with higher R² scores and lower RMSE values. This suggests that the Random Forest model is better at capturing the non-linear relationships in the data.
+- The most important features for predicting heating and cooling loads were found to be Surface_Area, Overall_Height, and Glazing_Area.
 
 ### Source
-
 
 Dataset: [Energy Efficiency Dataset on Kaggle](https://www.kaggle.com/datasets/ujjwalchowdhury/energy-efficiency-data-set)
