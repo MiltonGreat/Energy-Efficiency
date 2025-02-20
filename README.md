@@ -59,6 +59,8 @@ Both models are evaluated using R² Score and Root Mean Squared Error (RMSE).
 7. Feature Importance Analysis
 - Feature importance is analyzed using the Random Forest model, highlighting which features contribute the most to predicting energy efficiency. A bar chart is generated to visualize the feature importance.
 
+![Linear](https://github.com/user-attachments/assets/d84097de-0616-4b2f-93b4-6ab65d634eae)
+
 ### Key Results
 
 1. Descriptive Statistics
